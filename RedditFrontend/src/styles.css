@@ -1,0 +1,33 @@
+/* You can add global styles to this file, and also import other style files */
+input.ng-invalid.ng-touched{
+  border: 1px solid red;
+}
+html{
+  padding: 0;
+  height: 100%;
+}
+
+body{
+  margin-top: 63px;
+  height: 100%;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+#toast-container > div {
+  opacity: 1;
+}
+.toast {
+  font-size: initial !important;
+  border: initial !important;
+  backdrop-filter: blur(0) !important;
+}
+.toast-success {
+  background-color: #51A351 !important;
+}
+.toast-error {
+  background-color: #BD362F !important;
+}
