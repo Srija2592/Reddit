@@ -28,6 +28,7 @@ import { EditorModule } from '@tinymce/tinymce-angular';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewsubredditComponent } from './viewsubreddit/viewsubreddit.component';
+import {MatMenuModule} from '@angular/material/menu';
 
 
 @NgModule({
@@ -59,7 +60,8 @@ import { ViewsubredditComponent } from './viewsubreddit/viewsubreddit.component'
     ToastrModule.forRoot(),
     FontAwesomeModule,
     EditorModule,
-    NgbModule
+    NgbModule,
+    MatMenuModule
   ],
   providers: [
   {provide: HTTP_INTERCEPTORS,
