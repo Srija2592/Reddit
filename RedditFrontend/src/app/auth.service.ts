@@ -12,7 +12,7 @@ import { LoginResponse } from './auth/login/loginresponse.payload';
 export class AuthService {
   @Output() loggedIn: EventEmitter<boolean> = new EventEmitter();
   @Output() username: EventEmitter<string> = new EventEmitter();
-  @Output() userid:EventEmitter<number>=new EventEmitter();
+
 
   refreshTokenPayload = {
     refreshToken: this.getRefreshToken(),

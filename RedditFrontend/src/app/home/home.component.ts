@@ -8,9 +8,6 @@ import { PostService } from '../shared/post.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit{
-
-
-
   posts: Array<PostModel> = [];
 
   constructor(private postService: PostService) {
