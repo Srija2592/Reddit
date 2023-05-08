@@ -2,7 +2,7 @@
   <div class="font-bold p-3">Browse Subreddits</div>
   <hr />
   <div *ngFor="let subreddit of subreddits" class="block p-2">
-      <div class="text-black"><a href="/view-subreddit/{{subreddit.id}}">{{subreddit.name}} by <p class="text-gray-500"> {{subreddit.username}}</p></a></div>
+      <div class="text-black"><a href="/view-subreddit/{{subreddit.id}}">{{subreddit.name}}  <div class="text-gray-500">by {{subreddit.username}}</div></a></div>
 
   </div>
   <div *ngIf="displayViewAll">

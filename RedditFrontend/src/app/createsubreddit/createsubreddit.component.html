@@ -1,36 +1,21 @@
-<div class="container">
-  <div class="row">
-    <div class="create-subreddit-container">
-      <form class="post-form" [formGroup]="createSubredditForm" (ngSubmit)="createSubreddit()">
-        <div class="form-group">
-          <div class="create-subreddit-heading">Create Subreddit</div>
-          <hr />
-          <input type="text" [formControlName]="'title'" class="form-control" style="margin-top: 5px"
+
+    <div class="border border-gray-500 p-3 m-5">
+      <form  [formGroup]="createSubredditForm" (ngSubmit)="createSubreddit()">
+
+          <div class="font-bold p-2 m-2 bg-gray-200">Create Subreddit</div>
+          <hr /><br>
+          <input type="text" [formControlName]="'title'" class="block m-2 p-2 w-11/12 h-12 border border-gray-300"
             placeholder="Title">
-          <textarea type="text" [formControlName]="'description'" style="width: 100%; margin-top: 5px"
+          <textarea type="text" [formControlName]="'description'" class="block m-2 p-2 w-11/12 h-12 border border-gray-300"
             placeholder="Description"></textarea>
           <div>
-            <div style="margin-top: 5px" class="float-right">
-              <button (click)="discard()" class="btnDiscard">Discard</button>
-              <button class="btnCreateSubreddit">Create</button>
+            <div class="flex justify-items-end float-right">
+              <button (click)="discard()" class="rounded-full border-gray-700 p-2 bg-gray-400 hover:bg-blue-200">Discard</button>&nbsp;&nbsp;
+              <button class="rounded-full border-gray-700 p-2 bg-gray-400 hover:bg-blue-200">Create</button>
             </div>
           </div>
-        </div>
+
       </form>
     </div>
-    <div class="col-md-3">
-      <div class="sidebar">
-        <h5 class="guidelines">Posting to Spring Reddit</h5>
-        <hr />
-        <ul>
-          <li>Remember the human</li>
-          <hr />
-          <li>Behave like you would in real life</li>
-          <hr />
-          <li>Don't spam</li>
-          <hr />
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
+
+
