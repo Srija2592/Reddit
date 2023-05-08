@@ -13,8 +13,8 @@
   <div>
      <strong>Your Comments : </strong>
   </div>
-  <div *ngFor="let comment of comments">
-    <div >
+  <div *ngFor="let comment of comments" >
+    <div class="hover:bg-gray-200 p-3">
       <div >
         by <a class="text-gray-400" routerLink="/user/comment.username">{{comment.username}}</a>
       </div>

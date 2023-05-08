@@ -30,6 +30,7 @@ public class SubredditService {
     public Subredditdto save(Subredditdto subredditdto){
         User user=userrepository.findByUsername(subredditdto.getUsername()).orElseThrow(()->new UsernameNotFoundException("user not found"));
         Subreddit save=subredditrepository.save(subredditMapper.mapDtoToSubreddit(subredditdto,user));
+
         subredditdto.setId(save.getId());
         return subredditdto;
 
@@ -39,6 +40,7 @@ public class SubredditService {
 
     @Transactional(readOnly = true)
     public List<Subredditdto> getAll() {
+
         return subredditrepository.findAll().stream().map(subredditMapper::mapSubredditToDto).collect(Collectors.toList());
     }
 

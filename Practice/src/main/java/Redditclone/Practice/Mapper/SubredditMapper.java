@@ -18,6 +18,7 @@ public interface SubredditMapper {
 
 
     @Mapping(target = "numberOfPosts",expression = "java(mapPosts(subreddit.getPosts()))")
+    @Mapping(target = "username",expression = "java(subreddit.getUser().getUsername())")
     Subredditdto mapSubredditToDto(Subreddit subreddit);
 
    default Integer mapPosts(List<Post> numberOfPosts){return numberOfPosts.size();}

@@ -18,6 +18,7 @@ export class SubredditsidebarComponent implements OnInit{
         this.displayViewAll = true;
       } else {
         this.subreddits = data;
+        console.log(this.subreddits);
       }
     });
   }

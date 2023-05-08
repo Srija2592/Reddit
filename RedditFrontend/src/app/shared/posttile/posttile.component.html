@@ -1,5 +1,6 @@
-<div class="p-4 mx-2 my-4 border border-gray-400 hover:bg-gray-100" *ngFor="let post of posts">
-  <app-votebutton [post]="post"></app-votebutton>
+<div class="flex flex-col w-full">
+<div class="block w-full p-4 mx-2 my-4  border border-gray-400 hover:bg-gray-100" *ngFor="let post of posts">
+
 
 
     <span >
@@ -22,9 +23,11 @@
         <fa-icon [icon]="faComments"></fa-icon>
         Comments({{post.commentCount}})
       </a>
+      <app-votebutton [post]="post"></app-votebutton>
       <button class="text-right rounded-full border border-gray-700 bg-gray-300 hover:bg-blue-200 p-2" (click)="goToPost(post.id)">
-        <p class="text-black">Read Post</p>
+        <p class="text-black font-semibold">Read Post</p>
       </button>
     </span>
 
+</div>
 </div>

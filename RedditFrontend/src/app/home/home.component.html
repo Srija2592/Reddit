@@ -1,15 +1,9 @@
-<div class="reddit-body">
-  <div class="container">
-    <div class="row">
-      <hr />
-      <div class="col-md-9">
+<div class="flex flex-row h-screen">
+      <div class="w-2/3 flex">
         <app-posttile [posts]="posts"></app-posttile>
-
       </div>
-      <div class="col-md-3">
-        <app-sidebar></app-sidebar>
+      <div class="items-end">
+        <app-sidebar></app-sidebar><br>
         <app-subredditsidebar></app-subredditsidebar>
       </div>
-    </div>
-  </div>
 </div>
