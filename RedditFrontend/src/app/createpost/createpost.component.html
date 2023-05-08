@@ -1,25 +1,22 @@
-<div class="container">
-  <div class="row">
-    <hr />
-    <div class="create-post-container col-md-9">
-      <form class="post-form" [formGroup]="createPostForm" (ngSubmit)="createPost()">
-        <div class="form-group">
-          <div class="create-post-heading">Create Post</div>
-          <hr />
-          <input type="text" [formControlName]="'postName'" class="form-control" style="margin-top: 5px"
-            placeholder="Title">
+<div class="block w-9/12 ml-1 border border-gray-400 p-2">
 
-          <input type="text" class="form-control" [formControlName]="'url'" style="margin-top: 5px" placeholder="URL">
+    <hr /><br>
 
-          <select class="form-control" style="margin-top: 10px" [formControlName]="'subredditName'">
-            <option value="" selected disabled>Select Subreddit</option>
+      <form  [formGroup]="createPostForm" (ngSubmit)="createPost()">
+
+          <div class="text-lg bg-gray-200 p-2"><strong>Create Post</strong></div>
+          <br><hr /><br>
+          <input type="text" class="block text-black border border-gray-300 w-11/12 h-12 p-2 " [formControlName]="'postName'"
+            placeholder="Title"><br>
+          <input type="text" class="block text-black border border-gray-300 w-11/12 h-12 p-2" [formControlName]="'url'"  placeholder="URL"><br>
+          <select   class="block text-black border border-gray-300 w-11/12 h-12 p-2" [formControlName]="'subredditName'">
+            <option value="" selected disabled><b>Select Subreddit</b></option>
             <option *ngFor="let subreddit of subreddits">{{subreddit.name}}</option>
-          </select>
+          </select><br>
 
-          <!-- <input type="text" [formControlName]="'description'" class="form-control" style="margin-top: 5px"
-            placeholder="Title"> -->
 
-          <editor [formControlName]="'description'" [init]="{
+
+          <editor class="block border border-black w-11/12 p-2 " [formControlName]="'description'" [init]="{
                       height: 500,
                       menubar: false,
                       plugins: [
@@ -31,16 +28,17 @@
                         'undo redo | formatselect | bold italic backcolor | \
                         alignleft aligncenter alignright alignjustify | \
                         bullist numlist outdent indent | removeformat | help'
-                    }"></editor>.
-
-          <span>
-            <div style="margin-top: 5px" class="float-right">
-              <button (click)="discardPost()" class="btnDiscard">Discard</button>
-              <button class="btnCreatePost" (click)="createPost()">Post</button>
-            </div>
-          </span>
-        </div>
+                    }"></editor>
       </form>
-    </div>
-  </div>
+
+          <br>
+            <div class="flex justify-items-end float-right">
+              <button (click)="discardPost()" class="rounded-full border-gray-700 p-2 bg-gray-400 hover:bg-blue-200">Discard</button>&nbsp;&nbsp;
+              <button class="rounded-full border-gray-700 p-2 bg-gray-400 hover:bg-blue-200" >Post</button>
+            </div>
+
+
+
+
+
 </div>

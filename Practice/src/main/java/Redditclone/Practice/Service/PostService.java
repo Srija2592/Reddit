@@ -35,12 +35,12 @@ public class PostService {
 
     private final Userrepository userrepository;
 
-    public Post save(PostRequest postRequest) {
+    public void save(PostRequest postRequest) {
         Subreddit subreddit=subredditrepository.findByName(postRequest.getSubredditName());
         User user=authService.getCurrentUser();
         Post post= postMapper.Map(postRequest,subreddit,user);
         postRepository.save(post);
-        return post;
+
     }
 
     @Transactional(readOnly = true)
