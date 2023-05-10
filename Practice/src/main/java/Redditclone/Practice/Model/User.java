@@ -35,6 +35,10 @@ public class User {
 
     private boolean enabled;
 
+    private String image;
+
+    private String fullname;
+
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Subreddit> subreddits;
 

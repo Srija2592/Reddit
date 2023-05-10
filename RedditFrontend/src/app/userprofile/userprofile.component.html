@@ -1,4 +1,10 @@
 <div class="p-3">
+  <img
+  class="mx-auto w-40 h-50 rounded-sm object-cover relative"
+  src="{{ user.image }}"
+  alt=""
+/>
+  <p class="text-center font-semibold text-md">{{user.fullname}}</p>
   <div>
     Welcome <b class="text-gray-400">{{name}}</b>.<br><br /> You have posted <b>{{postLength}}</b> time(s) and commented
     <b>{{commentLength}}</b> time(s).<br><br>

@@ -29,6 +29,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ViewsubredditComponent } from './viewsubreddit/viewsubreddit.component';
 import {MatMenuModule} from '@angular/material/menu';
+import { UpdateprofileComponent } from './updateprofile/updateprofile.component';
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 
 
 @NgModule({
@@ -47,7 +49,8 @@ import {MatMenuModule} from '@angular/material/menu';
     CreatesubredditComponent,
     ListsubredditComponent,
     UserprofileComponent,
-    ViewsubredditComponent
+    ViewsubredditComponent,
+    UpdateprofileComponent
   ],
   imports: [
     FormsModule,
@@ -61,7 +64,8 @@ import {MatMenuModule} from '@angular/material/menu';
     FontAwesomeModule,
     EditorModule,
     NgbModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDialogModule
   ],
   providers: [
   {provide: HTTP_INTERCEPTORS,
