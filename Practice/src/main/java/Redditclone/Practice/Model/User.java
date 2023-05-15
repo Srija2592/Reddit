@@ -39,8 +39,15 @@ public class User {
 
     private String fullname;
 
+    @Column(unique = true)
+    private String fileName;
+
+
     @OneToMany(mappedBy = "user",cascade = CascadeType.ALL)
     private List<Subreddit> subreddits;
+
+//    @OneToOne(cascade = CascadeType.ALL,targetEntity = FileModel.class)
+//    private FileModel file;
 
 
 }

@@ -1,10 +1,24 @@
 <div class="p-3">
+  <h1 class="text-lg font-medium ml-2 text-gray-600">Profile Details</h1>
+
+<p>{{fileName}}</p>
+<button type="submit" class="rounded-md border-gray-700 p-2 bg-blue-400 hover:bg-blue-200" (click)="check()">Image </button>
+<div class="p-3">
   <img
   class="mx-auto w-40 h-50 rounded-sm object-cover relative"
   src="{{ user.image }}"
-  alt=""
+  alt=" "
 />
-  <p class="text-center font-semibold text-md">{{user.fullname}}</p>
+<br>
+<p class="text-center font-semibold text-md">{{user.fullname}}</p>
+<br>
+<div *ngIf="retrieveResponse">
+  <img [src]="image" alt="Not loading">
+</div>
+
+
+
+
   <div>
     Welcome <b class="text-gray-400">{{name}}</b>.<br><br /> You have posted <b>{{postLength}}</b> time(s) and commented
     <b>{{commentLength}}</b> time(s).<br><br>
@@ -26,7 +40,10 @@
       </div>
 
       <b>{{comment.text}}</b>
+
+
     </div>
     <br><hr /><br>
+
   </div>
 </div>

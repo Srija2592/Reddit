@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
     this.authService.username.subscribe((data: string) => this.username = data);
     this.isLoggedIn = this.authService.isLoggedIn();
     this.username = this.authService.getUserName();
-    this.userservice.getuser(this.username).subscribe((data)=>{this.user=data});
+    this.userservice.getUserDetails(this.username).subscribe((data)=>{this.user=data});
   }
 
   goToUserProfile() {
@@ -43,7 +43,6 @@ export class HeaderComponent implements OnInit {
   }
   updateprofile(){
     const data = this.user;
-    console.log(data);
     this.dialog.open(UpdateprofileComponent, {
       data: data,
       height: '400px',
